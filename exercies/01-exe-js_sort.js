@@ -4,33 +4,27 @@
 // DO NOT mutate the original array
 const arrOfStrings = ['cat', 'wolf', 'yo', 'animal'];
 
-const longestStr = (arr) => {
-   const newArr = []
-   for (let i = 0; i>arr.length; i++){
-      newArr.push(arr[i])
-      console.log(newArr)
-   }
-
+const longestStr = (arr) => { 
+   function sortByLength(el1, el2){
+  return el1.length - el2.length
+ };
+ return arr.sort(sortByLength)
 }
+   const sortedbyNameLength = longestStr(arrOfStrings)
+   console.log(sortedbyNameLength)
 
-let longestStrings = longestStr(arrOfStrings)
-console.log(longestStrings)
-
-//ANSWER should be ['yo', 'cat', 'wolf', 'animal']
 
 //Exercise 2: Using the same arr (arrOfStrings), sort its elements alphabetically.
 // DU NOT mutate the original array
 
-const arrOfStrings = ['cat', 'wolf', 'yo', 'animal'];
+const arrOfStrings2 = ['cat', 'wolf', 'yo', 'animal'];
 
 const sortedStr = (arr) => {
-   //your code...
+   return arr.sort();
 }
 
-let sortedStrings = sortedStr(arrOfStrings)
+let sortedStrings = sortedStr(arrOfStrings2)
 console.log(sortedStrings)
-
-//ANSWER should be  ['animal', 'cat', 'wolf', 'yo']
 
 // COMPLEX EXERCISE 3: Sort the  objects in the array by age in ascending order,
 // if the age is the same sort them alphabetically in descending order
@@ -46,7 +40,10 @@ const people = [
 ];
 
 const sortByAge = (arr) => {
-   //your code...
+   function sortPeopleByAge(pers1, pers2){
+      return parseInt(pers1.age) - parseInt(pers2.age)
+   };
+   return arr.sort(sortPeopleByAge);
 }
 
 let output = sortByAge(people)
