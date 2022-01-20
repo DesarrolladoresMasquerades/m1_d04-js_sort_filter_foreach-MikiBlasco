@@ -5,7 +5,12 @@
 const arrOfStrings = ['cat', 'wolf', 'yo', 'animal'];
 
 const longestStr = (arr) => {
-   //your code...
+   const newArr = []
+   for (let i = 0; i>arr.length; i++){
+      newArr.push(arr[i])
+      console.log(newArr)
+   }
+
 }
 
 let longestStrings = longestStr(arrOfStrings)
